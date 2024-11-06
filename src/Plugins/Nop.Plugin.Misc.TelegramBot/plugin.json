@@ -1,0 +1,11 @@
+{
+  "Group": "Misc",
+  "FriendlyName": "Telegram Bot",
+  "SystemName": "Misc.TelegramBot",
+  "Version": "4.70.1",
+  "SupportedVersions": [ "4.70" ],
+  "Author": "Mohammad Ahmadi",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Misc.TelegramBot.dll",
+  "Description": "Telegram bot for ordering"
+}

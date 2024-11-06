@@ -1,0 +1,42 @@
+@model Nop.Plugin.Misc.TelegramBot.Models.TelegramBotConfigModel
+@inject Nop.Core.IWebHelper webHelper
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="TelegramBot" asp-action="Configure" method="post">
+    <selection class="content">
+        <div class="container-fluid">
+            <div class="card card-default">
+                <div class="card-body">
+                    <p>
+                        @Html.Raw(string.Format(T("Plugins.Misc.TelegramBot.Instructions").Text, webHelper.GetStoreLocation()))
+                    </p>
+                    <hr />
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <nop-label asp-for="BotToken" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="BotToken" />
+                            <span asp-validation-for="BotToken"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <nop-label asp-for="ChatId" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-editor asp-for="ChatId" />
+                            <span asp-validation-for="ChatId"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-9 offset-md-3">
+                            <button type="submit" name="save" class="btn btn-primary">@T("Admin.Common.Save")</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
